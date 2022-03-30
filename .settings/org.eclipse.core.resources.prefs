@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/secret=UTF-8
+encoding//src/secret/AES.java=UTF-8
+encoding//src/secret/DES.java=UTF-8
+encoding//src/secret/RSAEncrypt.java=UTF-8
+encoding//src/secret/hmac.java=UTF-8
