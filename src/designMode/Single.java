@@ -1,5 +1,9 @@
-package test;
-
+package designMode;
+/**
+ * 单例模式，懒汉式和饿汉式
+ * @author HsZ
+ *
+ */
 public class Single { //双检锁  结合了懒汉式和饿汉式
 	
 	private static Single instance;
