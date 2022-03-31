@@ -17,6 +17,7 @@ public class PECS {
 }
  class Fruit {
 	
+	 
 	public void show() {
 		System.out.println("我是水果");
 	}
