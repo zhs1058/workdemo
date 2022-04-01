@@ -12,6 +12,6 @@
 	<classpathentry kind="lib" path="libs/httpclient-4.5.2.jar"/>
 	<classpathentry kind="lib" path="libs/httpmime-4.5.2.jar"/>
 	<classpathentry kind="lib" path="libs/joda-time-2.9.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HsZ/Downloads/javax.servlet-api-4.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/HsZ/Downloads/javax.servlet-api-4.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
