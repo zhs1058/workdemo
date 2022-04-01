@@ -1,4 +1,4 @@
-package designMode;
+package designMode.templateMethod;
 /**
  * 模板方法，适用于流程相同，但是各个环节具体内容不同
  * 例如出国留学手续一般经过以下流程：索取学校资料，提出入学申请，
