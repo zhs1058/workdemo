@@ -16,6 +16,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import designMode.LoadXMLUtil;
+
 /**
  * 抽象工厂方法
  * 一、使用抽象工厂模式一般要满足以下条件。
@@ -77,7 +79,7 @@ class Horse implements Animal {
       p1.setBorder(BorderFactory.createTitledBorder("动物：马"));
       sp = new JScrollPane(p1);
       contentPane.add(sp, BorderLayout.CENTER);
-      JLabel l1 = new JLabel(new ImageIcon("src/image/A_Horse.jpg"));
+      JLabel l1 = new JLabel(new ImageIcon("src/images/abstractFactory/A_Horse.jpg"));
       p1.add(l1);
       jf.pack();
       jf.setVisible(false);
@@ -98,7 +100,7 @@ class Cattle implements Animal {
       p1.setBorder(BorderFactory.createTitledBorder("动物：牛"));
       sp = new JScrollPane(p1);
       contentPane.add(sp, BorderLayout.CENTER);
-      JLabel l1 = new JLabel(new ImageIcon("src/image/A_Cattle.jpg"));
+      JLabel l1 = new JLabel(new ImageIcon("src/images/abstractFactory/A_Cattle.jpg"));
       p1.add(l1);
       jf.pack();
       jf.setVisible(false);
@@ -125,7 +127,7 @@ class Fruitage implements Plant {
       p1.setBorder(BorderFactory.createTitledBorder("植物：水果"));
       sp = new JScrollPane(p1);
       contentPane.add(sp, BorderLayout.CENTER);
-      JLabel l1 = new JLabel(new ImageIcon("src/image/P_Fruitage.jpg"));
+      JLabel l1 = new JLabel(new ImageIcon("src/images/abstractFactory/P_Fruitage.jpg"));
       p1.add(l1);
       jf.pack();
       jf.setVisible(false);
@@ -146,7 +148,7 @@ class Vegetables implements Plant {
       p1.setBorder(BorderFactory.createTitledBorder("植物：蔬菜"));
       sp = new JScrollPane(p1);
       contentPane.add(sp, BorderLayout.CENTER);
-      JLabel l1 = new JLabel(new ImageIcon("src/image/P_Vegetables.jpg"));
+      JLabel l1 = new JLabel(new ImageIcon("src/images/abstractFactory/P_Vegetables.jpg"));
       p1.add(l1);
       jf.pack();
       jf.setVisible(false);
@@ -163,7 +165,6 @@ interface Farm {
   public Plant newPlant();
 }
 
-//具体工厂：韶关农场类
 class SGfarm implements Farm {
   public Animal newAnimal() {
       System.out.println("新牛出生！");
@@ -192,7 +193,7 @@ class ReadXML {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("src/config/config.xml"));
+            doc = builder.parse(new File("src/config/abstract-factory-config.xml"));
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
             String cName = "designMode.abstractFactory." + classNode.getNodeValue();
