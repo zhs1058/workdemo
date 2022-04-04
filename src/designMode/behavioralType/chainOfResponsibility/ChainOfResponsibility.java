@@ -1,4 +1,4 @@
-package designMode.chainOfResponsibility;
+package designMode.behavioralType.chainOfResponsibility;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package designMode.abstractFactory;
+package designMode.createType.abstractFactory;
 
 import java.awt.Container;
 import java.io.File;
@@ -16,7 +16,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import designMode.LoadXMLUtil;
 
 /**
  * 抽象工厂方法

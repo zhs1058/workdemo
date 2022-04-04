@@ -1,4 +1,4 @@
-package designMode.simpleFactory;
+package designMode.createType.simpleFactory;
 
 /**
  * 简单工厂方法模式

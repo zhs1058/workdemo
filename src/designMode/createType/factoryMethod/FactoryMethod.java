@@ -1,4 +1,4 @@
-package designMode.factoryMethod;
+package designMode.createType.factoryMethod;
 
 /**
  * 工厂方法模式

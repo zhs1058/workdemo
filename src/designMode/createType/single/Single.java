@@ -1,4 +1,4 @@
-package designMode.single;
+package designMode.createType.single;
 /**
  * 单例模式，懒汉式和饿汉式
  * @author HsZ

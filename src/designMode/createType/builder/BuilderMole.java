@@ -1,4 +1,4 @@
-package designMode.builder;
+package designMode.createType.builder;
 
 import java.awt.Container;
 import java.io.File;

@@ -1,4 +1,4 @@
-package designMode.observerMode;
+package designMode.behavioralType.observerMode;
 
 import java.util.Observable;
 import java.util.Observer;
