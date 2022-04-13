@@ -52,7 +52,7 @@ public class WaitAndNotify {
 			}
 			synchronized(lock) {
 				
-				System.out.println(Thread.currentThread().getName() + "正在被执行" + UUID.randomUUID());
+				System.out.println(Thread.currentThread().getName() + "正在被执行" + UUID.randomUUID() );
 			}
 		}
 		
