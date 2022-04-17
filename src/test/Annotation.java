@@ -7,9 +7,12 @@ import java.lang.annotation.Target;
 
 
 public class Annotation {
+	
+	@TestAnnotation
+	private String s;
 
 }
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
 @interface TestAnnotation{}
