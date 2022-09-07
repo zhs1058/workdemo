@@ -142,7 +142,7 @@ class ReadXML{
             doc = builder.parse(new File("src/config/builder-config.xml"));
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
-            String cName = "designMode.builder." + classNode.getNodeValue();
+            String cName = "designMode.createType.builder." + classNode.getNodeValue();
             System.out.println("ÐÂÀàÃû£º" + cName);
             Class<?> c = Class.forName(cName);
             //Arrays.asList(c.getMethods()).forEach(item -> item.setAccessible(true));

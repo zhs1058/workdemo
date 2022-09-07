@@ -25,7 +25,7 @@ public class ChainOfResponsibility {
 		Handler h3 = new ConcreteHandler3();
 		h1.setNext(h2);
 		h2.setNext(h3);
-		h1.doHandler(1);
+		h1.doHandler(10);
 	}
 
 }
@@ -50,7 +50,7 @@ class ConcreteHandler1 extends Handler{
 	public void doHandler(int days) {
 		// TODO Auto-generated method stub
 		if(days <= 2) {
-			System.out.println("两天假老师给批准了");
+			System.out.println("小于两天假老师给批准了");
 		}else {
 			System.out.println("老师无权审批，流转至下一审批节点");
 			getNext().doHandler(days);
