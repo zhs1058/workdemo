@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="libs"/>
 	<classpathentry kind="lib" path="libs/zwdd-sdk-java-1.1.9.jar" sourcepath="libs/zwdd-sdk-java-1.1.9.jar"/>
-	<classpathentry kind="lib" path="libs/commons-lang3-3.9.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang3-3.9.jar" sourcepath="libs/commons-lang3-3.9.jar"/>
 	<classpathentry kind="lib" path="libs/httpcore-4.4.13.jar"/>
 	<classpathentry kind="lib" path="libs/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libs/org.apache.commons.codec-1.3.0-20081006.jar"/>
