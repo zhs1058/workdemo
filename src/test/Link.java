@@ -1,5 +1,6 @@
 package test;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Link {
@@ -17,6 +18,7 @@ public class Link {
 		Linked res = null;
 		Linked next = null;
 		Linked l1 = head.next;
+		l1.dosth1();
 		while(l1 != null) {
 			
 			next = l1.next;
@@ -33,6 +35,8 @@ public class Link {
 	public static class Linked {
 		public int value;
 		public Linked next;
+		
+		public void dosth1() throws NullPointerException{}
 	}
 
 }

@@ -22,7 +22,7 @@ public class WaitAndNotify {
 		public void run() {
 			// TODO Auto-generated method stub
 			synchronized(lock) {
-				while(flag) {
+				//while(flag) {
 					try {
 						System.out.println(Thread.currentThread().getName() + "正在被阻塞");
 						lock.wait();
@@ -31,7 +31,7 @@ public class WaitAndNotify {
 						e.printStackTrace();
 					}
 					System.out.println(Thread.currentThread().getName() + "正在执行");
-				}
+				//}
 				
 			}
 		}
@@ -44,11 +44,11 @@ public class WaitAndNotify {
 		public void run() {
 			// TODO Auto-generated method stub
 			synchronized(lock) {
-				while(flag) {
+				//while(flag) {
 					flag = false;
 					lock.notify();
 					System.out.println(Thread.currentThread().getName() + "已经开始通知");
-				}
+				//}
 			}
 			synchronized(lock) {
 				
