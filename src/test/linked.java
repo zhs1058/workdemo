@@ -1,48 +1,82 @@
 package test;
 
+import java.util.Scanner;
+
 public class linked {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		LinkNode head = new LinkNode();
+		LinkNode l = head;
+		while(in.hasNextLine()) {
+			try {
+				int v = in.nextInt();
+				LinkNode node = new LinkNode();
+				node.value = v;
+				node.next = null;
+				head.next = node;
+				head = node;
+			}catch(Exception e) {
+				break;
+			}
+			
+		}
+		in.next();
+		int n = in.nextInt();
+		int m = in.nextInt();
+		l = l.next;
+		LinkNode left = null;
+		LinkNode right = null;
+		LinkNode star = null;
+		LinkNode end = null;
+		LinkNode pre = null;
+		LinkNode next = null;
+		LinkNode cur = l;
+		int i = 0;
+		while(cur != null) {
+			i ++;
+			if(i == n - 1) {
+				left = cur;
+			}
+			if(i == m + 1) {
+				right = cur;
+			}
+			
+			if(i >= n && i <= m) {
+				if(i == n) {
+					star = cur;
+				}
+				if(i == m) {
+					end = cur;
+				}
+				next = cur.next;
+				cur.next = pre;
+				pre = cur;
+				cur = next;
+			}else {
+				pre = cur;
+				cur = cur.next;
+			}
+		}
+		if(left == null) {
+			l = end;
+		}else {
+			left.next = end;
+		}
+		star.next = right;
 		
-		// Scanner input=new Scanner(System.in);
-        // String str=input.next();
-        Linked head = new Linked();
-        Linked h1 = head;
-        for(int i = 0; i < 10; i ++){
-            Linked l = new Linked();
-            l.value = i;
-            head.next = l;
-            head = l;
-        }
-        int l = 3;
-        int r = 7;
-        int i = 1;
-        Linked newHead = new Linked();
-        while(h1.next != null){
-            if(i >= l && i <= r){
-            	int j = 1;
-            	Linked tempHead = h1;
-                while(h1.next != null) {
-                	if(j == r) {
-                		Linked temp = new Linked();
-                		temp = h1;
-                		
-                	}
-                	j ++;
-                	head = head.next;
-                }
-                
-            }
-            h1 = h1.next;
-        }
-
-        System.out.println("hello world");
-    }
+		while(l != null) {
+			System.out.print(l.value);
+			l = l.next;
+		}
+		
+		
+		
+	}
 
 }
 
-class Linked {
+class LinkNode {
     int value;
-    Linked next;
+    LinkNode next;
 }

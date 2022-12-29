@@ -22,7 +22,7 @@ public class MysqlCon {
 		// static final String DB_URL = "jdbc:mysql://localhost:3306/RUNOOB";
 	 
 	    // MySQL 8.0 以上版本 - JDBC 驱动名及数据库 URL
-	    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
+	    static final String JDBC_DRIVER = " ";  
 	    static final String DB_URL = "jdbc:mysql://localhost:3306/zhs?useSSL=false&serverTimezone=UTC";
 	 
 	 

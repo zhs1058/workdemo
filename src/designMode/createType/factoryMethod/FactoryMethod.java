@@ -1,3 +1,4 @@
+
 package designMode.createType.factoryMethod;
 
 /**
