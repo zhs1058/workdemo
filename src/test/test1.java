@@ -13,6 +13,8 @@ public class test1 {
 		set.add("s");
 		TreeSet<String> set2 = new TreeSet<String>();
 		set2.add("s");
+		Vector<String> vector = new Vector();
+		vector.add(null);
 		//A a = new B();
 		Double a = 2.15;
 		String s = "s";

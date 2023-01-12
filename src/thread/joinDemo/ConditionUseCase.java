@@ -30,6 +30,12 @@ public class ConditionUseCase {
 	}
 	
 	public static void conditionSingle() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		lock.lock();
 		try {
 			System.out.println("ËøÍ¨Öª");

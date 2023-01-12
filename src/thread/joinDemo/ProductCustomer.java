@@ -38,7 +38,7 @@ class Producer implements Runnable{
         while (true){
             // synchronized : 因为两个线程共享该仓库对象,让两个线程抢锁的目的是保证线程安全
             synchronized (list){    // 当前对象锁：当前对象是list仓库对象
-                if (list.size() > 10){    // 大于0,说明仓库中已经有一个元素了 仓库已经满了等着消费进程进行消费
+                if (list.size() > 9){    // 大于0,说明仓库中已经有一个元素了 仓库已经满了等着消费进程进行消费
                     try {
                         list.wait();    // 仓库满了 让当前线程进入等待状态,并且释放掉list集合对象的锁, 因为一个对象就一把锁
                     } catch (InterruptedException e) {  // 假设生产线程synchronized已经抢到了这把锁, 这里要把锁释放掉 消费线程才能拿到锁跑程序
@@ -77,7 +77,7 @@ class Consumer implements Runnable{
         // 一直消费
         while (true){
             synchronized (list){
-                if (list.size() < 5){   // 仓库集合等于0 说明仓库为空 进入等待状态,同生产线程一样把对象锁释放掉,让生产者生产
+                if (list.size() < 1){   // 仓库集合等于0 说明仓库为空 进入等待状态,同生产线程一样把对象锁释放掉,让生产者生产
                     try {
                         list.wait();    // 进入等待状态,释放掉对象锁
                     } catch (InterruptedException e) {
