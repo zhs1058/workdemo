@@ -47,6 +47,7 @@ class OilFutures extends Observable{
 	}
 }
 
+//¶à·½
 class Bull implements Observer{
 
 	@Override
@@ -61,7 +62,7 @@ class Bull implements Observer{
 	}
 	
 }
-
+//¿Õ·½
 class Bear implements Observer{
 
 	@Override
